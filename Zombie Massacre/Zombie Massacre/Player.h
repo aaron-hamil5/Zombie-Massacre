@@ -7,7 +7,7 @@
 class Player 
 {
 	private:
-#pragma region Variables
+		#pragma region Variables
 		/*Player speed*/
 		const float START_SPEED = 200.0f;
 		/*Player health*/
@@ -37,6 +37,9 @@ class Player
 
 		/*Player Taking damage*/
 		sf::Time m_lastHit;
+
+		/*Players movement in pixels per second*/
+		float m_speed;
 		#pragma endregion
 
 	public:
@@ -94,12 +97,9 @@ class Player
 		int getHealth();
 		#pragma endregion
 
-
-
 		//Resets the player when game over
 		void resetPlayerState();
 		#pragma endregion
-
 };
 
 #endif

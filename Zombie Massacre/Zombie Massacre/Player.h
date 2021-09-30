@@ -27,7 +27,7 @@ class Player
 		
 		/*Playspace Boundries and size*/
 		sf::IntRect m_arena;
-		int m_tiles;
+		int m_tilesize;
 
 		/* Player movement*/
 		bool m_upArrowPressed = false;

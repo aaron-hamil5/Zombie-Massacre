@@ -21,7 +21,30 @@ Player::Player()
 
 void Player::spawn(sf::IntRect arena, sf::Vector2f resolution, int tileSize)
 {
+	#pragma region Spawn Player Location
+	/*Spawn Player In center of PlaySpace*/
+	m_position.x = arena.width / 2;
+	m_position.y = arena.height / 2;
+	#pragma endregion
+
+	#pragma region Sizing of area, Tiles, Resolution
+	/*Load the arena to m_arena*/
+	m_arena.left = arena.left;
+	m_arena.width = arena.width;
+	m_arena.top = arena.top;
+	m_arena.height = arena.height;
+
+	/*Tile size*/
+	m_tilesize = tileSize;
+
+	/*Save resolution*/
+	m_screenRes.x = resolution.x;
+	m_screenRes.y = resolution.y;
+	#pragma endregion
 }
+
+
+
 
 bool Player::hit(sf::Time timeHit)
 {

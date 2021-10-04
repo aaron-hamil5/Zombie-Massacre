@@ -67,22 +67,30 @@ sf::Time Player::lastHitTime()
 
 sf::FloatRect Player::getPosition()
 {
-	return sf::FloatRect();
+	/*Getting the current position from the sprite*/
+	return m_Sprite.getLocalBounds();
 }
 
 float Player::getRotation()
 {
-	return 0.0f;
+	/*Get the current rotation of this sprite*/
+	return m_Sprite.getRotation();
 }
 
 sf::Sprite Player::getSprite()
 {
-	return sf::Sprite();
+	return m_Sprite;
+}
+
+int Player::getHealth()
+{
+	return m_health;
 }
 
 sf::Vector2f Player::getCenter()
 {
-	return sf::Vector2f();
+	/*Get the Position which will tell us the center*/
+	return m_position;
 }
 
 void Player::moveLeft()
@@ -131,11 +139,6 @@ void Player::upgradeSpeed()
 
 void Player::increaseHealth()
 {
-}
-
-int Player::getHealth()
-{
-	return 0;
 }
 
 void Player::resetPlayerState()

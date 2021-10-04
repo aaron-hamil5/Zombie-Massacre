@@ -135,6 +135,54 @@ void Player::stopDown()
 
 void Player::update(float elapsedTime, sf::Vector2i mousePos)
 {
+	#pragma region Movement
+	/*If detect arrow presses and move it by the speed set*/
+	if (m_upArrowPressed) 
+	{
+		m_position.y -= m_speed * elapsedTime;
+	}
+	if (m_downArrowPressed)
+	{
+		m_position.y += m_speed * elapsedTime;
+	}
+
+	if (m_leftArrowPressed)
+	{
+		m_position.x -= m_speed * elapsedTime;
+	}
+	if (m_rightArrowPressed)
+	{
+		m_position.x += m_speed * elapsedTime;
+	}
+	#pragma endregion
+
+	/*Update Position*/
+	m_Sprite.setPosition(m_position);
+
+	#pragma region Boundries
+	/*Making sure they cant leave the place space*/
+	if (m_position.x > m_arena.width - m_tilesize) {
+		m_position.x = m_arena.width - m_tilesize;
+	}
+	if (m_position.x > m_arena.left + m_tilesize) {
+		m_position.x = m_arena.left + m_tilesize;
+	}
+
+	if (m_position.y > m_arena.height - m_tilesize) {
+		m_position.y = m_arena.height - m_tilesize;
+	}
+	if (m_position.y > m_arena.top + m_tilesize) {
+		m_position.y = m_arena.top + m_tilesize;
+	}
+	#pragma endregion
+
+	#pragma region Roation from Mouse
+	float angle = (atan2(mousePos.y - m_screenRes.y / 2,
+						mousePos.x - m_screenRes.x / 2) * 180)
+						/ 3.141;
+
+	m_Sprite.setRotation(angle);
+	#pragma endregion
 }
 
 void Player::upgradeHealth()

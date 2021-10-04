@@ -95,34 +95,42 @@ sf::Vector2f Player::getCenter()
 
 void Player::moveLeft()
 {
+	m_leftArrowPressed = true;
 }
 
 void Player::moveRight()
 {
+	m_rightArrowPressed = true;
 }
 
 void Player::moveUp()
 {
+	m_upArrowPressed = true;
 }
 
 void Player::moveDown()
 {
+	m_downArrowPressed = true;
 }
 
 void Player::stopLeft()
 {
+	m_leftArrowPressed = false;
 }
 
 void Player::stopRight()
 {
+	m_rightArrowPressed = false;
 }
 
 void Player::stopUp()
 {
+	m_upArrowPressed = false;
 }
 
 void Player::stopDown()
 {
+	m_downArrowPressed = false;
 }
 
 void Player::update(float elapsedTime, sf::Vector2i mousePos)

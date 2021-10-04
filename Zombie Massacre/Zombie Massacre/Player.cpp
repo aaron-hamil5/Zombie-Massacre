@@ -43,9 +43,6 @@ void Player::spawn(sf::IntRect arena, sf::Vector2f resolution, int tileSize)
 	#pragma endregion
 }
 
-
-
-
 bool Player::hit(sf::Time timeHit)
 {
 	return false;
@@ -131,4 +128,10 @@ int Player::getHealth()
 
 void Player::resetPlayerState()
 {
+	/*Setting varibles with the constent when game starts / resets*/
+	m_speed = START_SPEED;
+	m_health = START_HEALTH;
+	m_maxHealth = m_maxHealth;
+
+
 }

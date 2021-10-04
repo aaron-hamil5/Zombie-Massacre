@@ -93,7 +93,7 @@ class Player
 		void upgradeHealth();
 		void upgradeSpeed();
 
-		void increaseHealth();
+		void increaseHealth(int amount);
 		int getHealth();
 		#pragma endregion
 

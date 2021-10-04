@@ -187,15 +187,26 @@ void Player::update(float elapsedTime, sf::Vector2i mousePos)
 
 void Player::upgradeHealth()
 {
+	/*Upgrade the health by 20%*/
+	m_maxHealth += (START_HEALTH * .2);
 }
 
 void Player::upgradeSpeed()
 {
+	/*Upgrade the speed by 20%*/
+	m_speed += (START_SPEED * .2);
 }
 
-void Player::increaseHealth()
+void Player::increaseHealth(int amount)
 {
+	m_health += amount;
+	
+	/*But not pass the max health*/
+	if (m_health > m_maxHealth) {
+		m_health = m_maxHealth;
+	}
 }
+
 
 void Player::resetPlayerState()
 {

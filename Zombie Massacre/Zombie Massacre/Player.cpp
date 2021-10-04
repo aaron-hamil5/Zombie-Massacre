@@ -45,7 +45,19 @@ void Player::spawn(sf::IntRect arena, sf::Vector2f resolution, int tileSize)
 
 bool Player::hit(sf::Time timeHit)
 {
-	return false;
+	/*Creating a cool down hit time so player doesnt lose all their health at once*/
+	if (timeHit.asMicroseconds() - m_lastHit.asMilliseconds() > 200) 
+	{
+		/*Update last hit time to create the cool down then take 10 health*/
+		m_lastHit = timeHit;
+		m_health -= 10;
+		return true;
+	}
+	else
+	{
+		/*If cooldown isnt complete, do nothing*/
+		return false;
+	}
 }
 
 sf::Time Player::lastHitTime()

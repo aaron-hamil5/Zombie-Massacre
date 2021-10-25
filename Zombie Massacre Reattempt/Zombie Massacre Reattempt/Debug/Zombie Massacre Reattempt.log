@@ -1,0 +1,22 @@
+﻿  main.cpp
+C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\main.cpp(17,48): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\main.cpp(18,48): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\main.cpp(19,43): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\main.cpp(19,29): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  Zombie Massacre Reattempt.vcxproj -> C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Debug\Zombie Massacre Reattempt.exe

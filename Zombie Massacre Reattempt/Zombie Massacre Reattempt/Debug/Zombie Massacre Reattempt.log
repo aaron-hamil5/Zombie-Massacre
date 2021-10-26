@@ -1,4 +1,5 @@
-﻿  main.cpp
+﻿  TextureHolder.cpp
+  main.cpp
 C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\main.cpp(17,48): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
           with
           [
@@ -19,4 +20,5 @@ C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie
           [
               T=float
           ]
+  Generating Code...
   Zombie Massacre Reattempt.vcxproj -> C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Debug\Zombie Massacre Reattempt.exe

@@ -47,7 +47,7 @@ int main()
 		{
 			if (event.type == sf::Event::KeyPressed)
 			{
-				#pragma region Pause & Reset Game
+#pragma region Pause & Reset Game
 				/*Pause game mid game*/
 				if (event.key.code == sf::Keyboard::Return &&
 					state == State::PLAYING) {
@@ -72,34 +72,34 @@ int main()
 				{
 					// Gameplay event logic
 				}
-				#pragma endregion
+#pragma endregion
 
-				#pragma region Movement Handling
+#pragma region Movement Handling
 				if (state == State::PLAYING) {
 					/*Start moving the player and stop when the key is releced*/
-					#pragma region Up
+#pragma region Up
 					if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) { player.moveUp(); }
 					else { player.stopUp(); }
-					#pragma endregion
+#pragma endregion
 
-					#pragma region Down
+#pragma region Down
 					if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) { player.moveDown(); }
 					else { player.stopDown(); }
-					#pragma endregion
+#pragma endregion
 
-					#pragma region Left
+#pragma region Left
 					if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) { player.moveLeft(); }
 					else { player.stopLeft(); }
-					#pragma endregion
+#pragma endregion
 
-					#pragma region Right
+#pragma region Right
 					if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) { player.moveRight(); }
 					else { player.stopRight(); }
-					#pragma endregion
+#pragma endregion
 				}
-				#pragma endregion
+#pragma endregion
 
-				#pragma region Levelling Up
+#pragma region Levelling Up
 				if (state == State::LEVELLING_UP) {
 					if (event.key.code == sf::Keyboard::Num1) {
 						state = State::PLAYING;
@@ -120,11 +120,11 @@ int main()
 						state = State::PLAYING;
 					}
 				}
-				#pragma endregion
+#pragma endregion
 
 				if (state == State::PLAYING)
 				{
-					#pragma region Arena Size
+#pragma region Arena Size
 					/*Setting up the size of the play space*/
 					arena.width = 500;
 					arena.height = 500;
@@ -133,22 +133,22 @@ int main()
 
 					/*Tile Size*/
 					int tileSize = createBackground(bg, arena);
-					#pragma endregion
+#pragma endregion
 
-					#pragma region Spawning Player
+#pragma region Spawning Player
 					player.spawn(arena, desktopRes, tileSize);
 
 					clock.restart();
-					#pragma endregion
+#pragma endregion
 				}
 			}
 
-			#pragma region Quit game
+#pragma region Quit game
 			//Handle game quitting
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) {
 				window.close();
 			}
-			#pragma endregion
+#pragma endregion
 
 		}
 		/*Update*/

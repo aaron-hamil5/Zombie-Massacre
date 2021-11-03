@@ -17,6 +17,4 @@ public:
 	TextureHolder();
 	static sf::Texture& GetTexture(std::string const& filename);
 };
-
-
 #endif TEXTURE_HOLDER_H

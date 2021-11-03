@@ -1,4 +1,4 @@
- #include "TextureHolder.h"
+#include "TextureHolder.h"
 #include <assert.h>
 
 TextureHolder* TextureHolder::m_Instance = nullptr;

@@ -27,7 +27,7 @@ public:
 	void update(float elapsedTime, sf::Vector2i playerLocation);
 
 private:
-	#pragma region Speed
+#pragma region Speed
 	/*How fast Zombies move*/
 	const float BLOATER_SPEED = 40.0f;
 	const float CHASER_SPEED = 80.0f;
@@ -37,9 +37,9 @@ private:
 	float m_speed;
 
 	/*Varying Speed*/
-	const int MAX_VARIANCE;
+	const int MAX_VARIANCE = 1000;
 	const int OFFSET = 101 - MAX_VARIANCE;
-	#pragma endregion
+#pragma endregion
 
 	/*Damege inflict*/
 

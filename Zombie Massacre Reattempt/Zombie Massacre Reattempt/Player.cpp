@@ -2,22 +2,22 @@
 
 Player::Player()
 {
-	#pragma region Linking Variables
+#pragma region Linking Variables
 
 	/*Linking the main contents to the variables*/
 	m_speed = START_SPEED;
 	m_health = START_HEALTH;
 	m_maxHealth = START_HEALTH;
 
-	#pragma endregion
+#pragma endregion
 
-	#pragma region Linking Textures
+#pragma region Linking Textures
 
 	/*Setting image to texture and linking texture*/
 	m_texture.loadFromFile("Assets/graphics/player.png");
 	m_Sprite.setTexture(m_texture);
 
-	#pragma endregion
+#pragma endregion
 
 	/*Getting the location*/
 	m_Sprite.setOrigin(25, 25);
@@ -25,15 +25,15 @@ Player::Player()
 
 void Player::spawn(sf::IntRect arena, sf::Vector2f resolution, int tileSize)
 {
-	#pragma region Spawn Player Location
+#pragma region Spawn Player Location
 
 	/*Spawn Player In centre of Play Space*/
 	m_position.x = arena.width / 2;
 	m_position.y = arena.height / 2;
 
-	#pragma endregion
+#pragma endregion
 
-	#pragma region Sizing of area, Tiles, Resolution
+#pragma region Sizing of area, Tiles, Resolution
 
 	/*Load the arena to m_arena*/
 	m_arena.left = arena.left;
@@ -48,12 +48,12 @@ void Player::spawn(sf::IntRect arena, sf::Vector2f resolution, int tileSize)
 	m_screenRes.x = resolution.x;
 	m_screenRes.y = resolution.y;
 
-	#pragma endregion
+#pragma endregion
 }
 
 bool Player::hit(sf::Time timeHit)
 {
-	#pragma region Cool Down
+#pragma region Cool Down
 
 	/*Creating a cool down hit time so player doesn’t lose all their health at once*/
 	if (timeHit.asMicroseconds() - m_lastHit.asMilliseconds() > 200)
@@ -69,7 +69,7 @@ bool Player::hit(sf::Time timeHit)
 		return false;
 	}
 
-	#pragma endregion
+#pragma endregion
 }
 
 sf::Time Player::lastHitTime() { return sf::Time(); }
@@ -113,7 +113,7 @@ void Player::stopDown() { m_downArrowPressed = false; }
 
 void Player::update(float elapsedTime, sf::Vector2i mousePos)
 {
-	#pragma region Movement
+#pragma region Movement
 	/*If detect arrow presses and move it by the speed set*/
 	if (m_upArrowPressed) { m_position.y -= m_speed * elapsedTime; }
 
@@ -122,12 +122,12 @@ void Player::update(float elapsedTime, sf::Vector2i mousePos)
 	if (m_leftArrowPressed) { m_position.x -= m_speed * elapsedTime; }
 
 	if (m_rightArrowPressed) { m_position.x += m_speed * elapsedTime; }
-	#pragma endregion
+#pragma endregion
 
 	/*Update Position*/
 	m_Sprite.setPosition(m_position);
 
-	#pragma region Boundaries
+#pragma region Boundaries
 	/*Making sure they can’t leave the play space*/
 	if (m_position.x > m_arena.width - m_tilesize) { m_position.x = m_arena.width - m_tilesize; }
 
@@ -136,15 +136,15 @@ void Player::update(float elapsedTime, sf::Vector2i mousePos)
 	if (m_position.y > m_arena.height - m_tilesize) { m_position.y = m_arena.height - m_tilesize; }
 
 	if (m_position.y > m_arena.top + m_tilesize) { m_position.y = m_arena.top + m_tilesize; }
-	#pragma endregion
+#pragma endregion
 
-	#pragma region Roation from Mouse
+#pragma region Roation from Mouse
 	float angle = (atan2(mousePos.y - m_screenRes.y / 2,
 		mousePos.x - m_screenRes.x / 2) * 180)
 		/ 3.141;
 
 	m_Sprite.setRotation(angle);
-	#pragma endregion
+#pragma endregion
 }
 
 #pragma region Player Perks
@@ -172,4 +172,3 @@ void Player::resetPlayerState()
 	m_health = START_HEALTH;
 	m_maxHealth = m_maxHealth;
 }
-

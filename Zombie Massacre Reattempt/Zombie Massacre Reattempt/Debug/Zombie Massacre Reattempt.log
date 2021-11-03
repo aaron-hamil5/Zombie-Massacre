@@ -1,24 +1,14 @@
-﻿  TextureHolder.cpp
-  main.cpp
-C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\main.cpp(17,48): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
+﻿  Zombie.cpp
+C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\Zombie.cpp(83,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\Zombie.cpp(116,19): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
           with
           [
-              T=float
+              T=int
           ]
-C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\main.cpp(18,48): warning C4244: '=': conversion from 'unsigned int' to 'T', possible loss of data
+C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\Zombie.cpp(117,19): warning C4244: 'initializing': conversion from 'T' to 'float', possible loss of data
           with
           [
-              T=float
+              T=int
           ]
-C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\main.cpp(19,43): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
-          with
-          [
-              T=float
-          ]
-C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\main.cpp(19,29): warning C4244: 'argument': conversion from 'T' to 'unsigned int', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Generating Code...
+C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Zombie Massacre Reattempt\Zombie.cpp(131,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   Zombie Massacre Reattempt.vcxproj -> C:\Users\aaron\Documents\GitHub\Zombie-Massacre\Zombie Massacre Reattempt\Debug\Zombie Massacre Reattempt.exe
